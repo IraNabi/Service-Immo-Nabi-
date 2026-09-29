@@ -1,17 +1,74 @@
-SERVICE IMMO NABI — SITE WEB
-=============================
+function ouvrir(page) {
 
-Fichiers:
-- index.html : structure du site
-- style.css  : design responsive
-- script.js  : catalogue, recherche, filtres et formulaire WhatsApp
+  document.querySelectorAll(".page").forEach(function(section) {
+    section.classList.remove("active");
+  });
 
-UTILISATION:
-1. Décompressez le fichier ZIP.
-2. Ouvrez index.html dans un navigateur pour tester le site.
-3. Pour publier, envoyez les 3 fichiers sur votre hébergement.
+  document.getElementById(page).classList.add("active");
 
-À MODIFIER:
-- Les biens sont dans le tableau `properties` de script.js.
-- Le numéro WhatsApp est actuellement 22656304065.
-- Remplacez les icônes par de vraies photos si vous le souhaitez.
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+  document.getElementById("menu").classList.remove("open");
+}
+
+
+function menu() {
+
+  document.getElementById("menu").classList.toggle("open");
+
+}
+
+
+function envoyerAnnonce(event) {
+
+  event.preventDefault();
+
+  const nom =
+    document.getElementById("nom").value;
+
+  const titre =
+    document.getElementById("titre").value;
+
+  const type =
+    document.getElementById("type").value;
+
+  const prix =
+    document.getElementById("prix").value;
+
+  const lieu =
+    document.getElementById("lieu").value;
+
+  const description =
+    document.getElementById("description").value;
+
+
+  const message =
+`Bonjour Service Immo Nabi,
+
+Je souhaite publier un bien.
+
+👤 Propriétaire : ${nom}
+
+🏠 Bien : ${titre}
+
+📌 Type : ${type}
+
+💰 Prix : ${prix}
+
+📍 Localisation : ${lieu}
+
+📝 Description :
+${description}`;
+
+
+  const url =
+    "https://wa.me/22656304065?text=" +
+    encodeURIComponent(message);
+
+
+  window.open(url, "_blank");
+
+}
