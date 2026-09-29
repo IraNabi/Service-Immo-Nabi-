@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Service Immo Nabi - Vente, Location, Résidence Meublée et Gestion Immobilière à Ouagadougou.">
+  <title>Service Immo Nabi | L'agence à votre service</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#accueil"><span>SIM</span> Service Immo Nabi</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <nav id="navMenu">
+      <a href="#accueil">Accueil</a>
+      <a href="#biens">Biens</a>
+      <a href="#services">Services</a>
+      <a href="#agence">L'agence</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="accueil" class="hero">
+  <div class="container hero-content">
+    <div>
+      <p class="eyebrow">IMMOBILIER À OUAGADOUGOU</p>
+      <h1>Trouvez votre prochain <span>bien immobilier</span>.</h1>
+      <p class="hero-text">Vente • Location • Résidence Meublée • Gestion Immobilière</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#biens">Voir les biens</a>
+        <a class="btn whatsapp" href="https://wa.me/22656304065?text=Bonjour%20Service%20Immo%20Nabi%2C%20je%20cherche%20un%20bien." target="_blank">WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-icon">🏠</div>
+      <h3>Service Immo Nabi</h3>
+      <p>L'agence à votre service</p>
+      <strong>📞 56 30 40 65</strong>
+    </div>
+  </div>
+</section>
+
+<section class="search-section">
+  <div class="container search-box">
+    <h2>Rechercher un bien</h2>
+    <div class="filters">
+      <select id="typeFilter"><option value="">Tous les types</option><option>Vente</option><option>Location</option><option>Meublé</option></select>
+      <select id="zoneFilter"><option value="">Toutes les zones</option><option>Ouaga 2000</option><option>Patte d'Oie</option><option>Saaba</option><option>Tingandogo</option><option>Karpala</option><option>Autre</option></select>
+      <input id="searchInput" type="search" placeholder="Mot-clé, quartier...">
+      <button class="btn primary" id="searchBtn">Rechercher</button>
+    </div>
+  </div>
+</section>
+
+<section id="biens" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">CATALOGUE</p><h2>Nos biens disponibles</h2></div>
+      <span id="count" class="count"></span>
+    </div>
+    <div id="propertyGrid" class="property-grid"></div>
+  </div>
+</section>
+
+<section id="services" class="section light">
+  <div class="container">
+    <div class="center"><p class="eyebrow">NOS SERVICES</p><h2>Une solution pour chaque projet</h2></div>
+    <div class="services">
+      <article><div class="service-icon">🏡</div><h3>Vente</h3><p>Parcelles, maisons, villas et biens immobiliers sélectionnés à Ouagadougou.</p></article>
+      <article><div class="service-icon">🔑</div><h3>Location</h3><p>Maisons, mini-villas, boutiques et autres biens adaptés à votre budget.</p></article>
+      <article><div class="service-icon">🛋️</div><h3>Résidence Meublée</h3><p>Des logements meublés pour vos courts et longs séjours.</p></article>
+      <article><div class="service-icon">📋</div><h3>Gestion Immobilière</h3><p>Accompagnement dans la gestion et la valorisation de vos biens.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="agence" class="section">
+  <div class="container about">
+    <div class="about-badge">SIM</div>
+    <div>
+      <p class="eyebrow">À PROPOS</p>
+      <h2>Service Immo Nabi</h2>
+      <p>Votre partenaire immobilier à Ouagadougou pour acheter, vendre, louer ou gérer un bien en toute simplicité.</p>
+      <p>Notre objectif : vous accompagner avec des informations claires, une sélection de biens et un contact rapide.</p>
+      <a class="btn primary" href="https://wa.me/22656304065?text=Bonjour%20Service%20Immo%20Nabi%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20bien." target="_blank">Parler à l'agence</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="container contact">
+    <div>
+      <p class="eyebrow">CONTACT</p>
+      <h2>Parlons de votre projet immobilier</h2>
+      <p>Envoyez votre demande et l'agence vous répondra directement sur WhatsApp.</p>
+      <div class="contact-info"><strong>📞 56 30 40 65</strong><span>📍 Ouagadougou, Burkina Faso</span></div>
+    </div>
+    <form id="contactForm">
+      <input id="name" required placeholder="Votre nom">
+      <input id="phone" required placeholder="Votre numéro">
+      <select id="request"><option>Acheter un bien</option><option>Louer un bien</option><option>Vendre mon bien</option><option>Gestion immobilière</option><option>Résidence meublée</option></select>
+      <textarea id="message" rows="4" required placeholder="Votre demande"></textarea>
+      <button class="btn whatsapp" type="submit">Envoyer sur WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong>Service Immo Nabi</strong><p>L'agence à votre service.</p></div>
+    <div>Vente • Location • Meublé • Gestion</div>
+    <div>#ServiceImmNabi</div>
+  </div>
+  <div class="copyright">© <span id="year"></span> Service Immo Nabi. Tous droits réservés.</div>
+</footer>
+
+<a class="floating-wa" href="https://wa.me/22656304065?text=Bonjour%20Service%20Immo%20Nabi" target="_blank" aria-label="WhatsApp">✆</a>
+<script src="script.js"></script>
+</body>
+</html>
